@@ -27,8 +27,7 @@ mixin ChatObserverScrollPhysicsMixin on ScrollPhysics {
       velocity: velocity,
     );
 
-    if (newPosition.extentBefore <= observer.fixedPositionOffset ||
-        !isNeedFixedPosition ||
+    if (!isNeedFixedPosition ||
         observer.isRemove) {
       _handlePositionCallback(ChatScrollObserverHandlePositionResultModel(
         type: ChatScrollObserverHandlePositionType.none,
